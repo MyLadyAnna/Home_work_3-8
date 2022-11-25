@@ -14,14 +14,14 @@ int[,] GetArray(int rows, int cols)
 
         array[i, j] = num;
         if (i <= j + 1 && i + j < rows - 1)         // заполнение строки слева направо
-            ++j;
+            j++;
         else if (i < j && i + j >= rows - 1)        // сверху вниз
-            ++i;
+            i++;
         else if (i >= j && i + j > rows - 1)        // справа налево
-            --j;
+            j--;
         else
-            --i;                                    // снизу в верх
-        ++num;
+            i--;                                    // снизу в верх
+        num++;
     }
 
     return array;
